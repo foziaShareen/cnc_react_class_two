@@ -4,6 +4,10 @@ import React,{Component} from 'react';
 import Prog1 from './components/prog1';
 import {Navbar ,NavbarBrand} from 'reactstrap';
 import {PROGRAMERS} from './shared/programs';
+import Header from './components/HeaderComponent';
+import Footer from './components/FooterComponent';
+import { Switch, Route, Redirect } from 'react-router-dom';
+
 
 class App extends Component  {
  constructor(props){
@@ -15,17 +19,17 @@ class App extends Component  {
  render(){
    return(
      <div>
-    <Navbar dark color="primary">
+   
+  
 
-     <div className="container">
-  <NavbarBrand href="/">
-Hire the top level Programers
-  </NavbarBrand >
-  </div>
 
-</Navbar>
+<Header/>
 
 <Prog1 programers={this.state.programers}/>
+
+<Footer/>
+
+
 </div>
    )
  }
